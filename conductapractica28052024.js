@@ -21,5 +21,12 @@ function calcularTotal(){
     spTotal.textContent = elTotal;
 }
 function mostrarEnCarro(){
-
+    listaCarro.textContent = "";
+    for(var objP of carro)
+    {
+        var nodoProductoEnCarro = document.createElement("li");
+        nodoProductoEnCarro.classList.add("list-group-item","text-right","mx-2");
+        nodoProductoEnCarro.textContent = objP.nombre + " - $" + objP.precio;
+        listaCarro.appendChild(nodoProductoEnCarro);
+    }
 }
